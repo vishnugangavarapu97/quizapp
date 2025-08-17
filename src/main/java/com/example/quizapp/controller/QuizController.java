@@ -21,6 +21,11 @@ public class QuizController {
     @Autowired
     QuizService quizService;
 
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello from Quiz Service!";
+    }
+
     @PostMapping("create")
     public ResponseEntity<String> Createquiz(@RequestParam String category , @RequestParam int numQ, @RequestParam String title){
 
